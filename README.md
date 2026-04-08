@@ -77,3 +77,29 @@ Predicted regimes are used to drive dynamic portfolio allocations across a selec
 │   └── (optional helper scripts / functions)
 └── figures/
     └── (generated charts used in report)
+
+```
+
+## How to Run This Project
+
+This project can be run either locally using Jupyter Notebook or through Deepnote.
+
+### Option 1: Run in Deepnote (Recommended)
+
+1. Open Deepnote
+2. Import this GitHub repository:
+   https://github.com/Spencer-Cheung/regime-portfolio-allocation.git
+3. Run the notebooks in the order listed below
+
+### Option 2: Run Locally
+
+#### 1. Clone the repository
+```bash
+git clone https://github.com/Spencer-Cheung/regime-portfolio-allocation.git
+cd regime-portfolio-allocation
+
+
+
+pip install -r requirements.txt
+
+jupyter notebook
