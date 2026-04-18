@@ -43,6 +43,13 @@ This project uses publicly available financial data from the following sources:
 
 No proprietary or restricted datasets are included in this repository.
 
+## Data Access Statement
+
+All data used in this project is publicly available from Yahoo Finance and FRED.  
+Users must provide their own FRED API key to access macroeconomic data.
+
+Due to licensing and size considerations, not all intermediate datasets are included in this repository. All data can be regenerated using the provided notebooks.
+
 
 ## Methodology
 
