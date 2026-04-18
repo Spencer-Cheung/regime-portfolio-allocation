@@ -4,6 +4,8 @@
 
 This project explores whether financial market environments can be grouped into distinct **market regimes** and whether those regimes can be used to improve **portfolio allocation decisions**.
 
+It demonstrates how machine learning can be applied to financial markets not just for prediction, but for improving decision-making under changing market conditions.
+
 The project uses a combination of:
 - **Unsupervised learning** to detect market regimes
 - **Supervised learning** to predict future regimes
@@ -44,6 +46,8 @@ No proprietary or restricted datasets are included in this repository.
 
 ## Methodology
 
+
+
 The project is organized into three main steps:
 
 ### 1. Unsupervised Learning: Market Regime Detection
@@ -55,6 +59,24 @@ After labeling the historical data with regimes, we train supervised machine lea
 ### 3. Portfolio Backtesting
 Predicted regimes are used to drive dynamic portfolio allocations across a selected set of assets. Strategy performance is then compared with benchmark portfolios using return, volatility, Sharpe ratio, and drawdown metrics.
 
+## Model Development Notes
+
+Multiple modeling approaches were explored, including:
+- Direct multiclass regime prediction
+- A two-layer model separating risk detection and regime classification
+
+The final implementation consolidates the best-performing approach for clarity and reproducibility.
+
+## Results
+
+The regime-based allocation framework was evaluated against benchmark strategies such as SPY buy-and-hold and a traditional 80/20 stock-bond portfolio.
+
+Key findings:
+- Regime-aware allocation improved risk-adjusted returns in certain market conditions
+- The model was effective at identifying high-volatility periods and reducing exposure to risk assets
+- Performance gains were primarily driven by improved drawdown management rather than raw return maximization
+
+While results vary across time periods, the framework consistently demonstrates improved risk management during periods of market stress.
 
 ## Repository Structure
 
@@ -62,30 +84,20 @@ Predicted regimes are used to drive dynamic portfolio allocations across a selec
 .
 ├── README.md
 ├── requirements.txt
-├── data/
-│   └── (optional local data files if used)
-├── notebooks/
-│   ├── 01_data_collection.ipynb
-│   ├── 02_feature_engineering.ipynb
-│   ├── 03_unsupervised_regime_detection.ipynb
-│   ├── 04_supervised_regime_prediction_1_stage.ipynb
-│   ├── 05_supervised_regime_prediction_2_stage.ipynb
-│   ├── 06_supervised_regime_prediction_combined.ipynb
-│   ├── 07_portfolio_backtest_Unsupervised.ipynb
-│   ├── 08_portfolio_backtest_Supervised.ipynb
-│   └── 09_portfolio_backtest_2_layer.ipynb
-│   └── 10_portfolio_backtest_Combined.ipynb
-├── src/
-│   └── (optional helper scripts / functions)
-└── figures/
-    └── (generated charts used in report)
+├── LICENSE
+├── 01 - Data Preparation - Fred YFinance.ipynb
+├── 02 - Data Engineering.ipynb
+├── 03 - Unsupervised.ipynb
+├── 04 - Supervised Combined.ipynb
+├── 05 - Regime Portfolio - Combined 2 Layer.ipynb
+└── (data files used for modeling and backtesting)
 ```
 
-## How to Run This Project
+## Getting Started
 
 This project can be run either locally using Jupyter Notebook or through Deepnote.
 
-# please use your own FredAPI Key
+> Note: You must provide your own FRED API key to run this project.
 
 #### 1. Clone the repository
 
@@ -105,3 +117,13 @@ pip install -r requirements.txt
 ```bash
 jupyter notebook
 ```
+
+## Execution Order
+
+Run the notebooks in the following order:
+
+1. 01 - Data Preparation - Fred YFinance  
+2. 02 - Data Engineering  
+3. 03 - Unsupervised  
+4. 04 - Supervised Combined  
+5. 05 - Regime Portfolio - Combined 2 Layer  
