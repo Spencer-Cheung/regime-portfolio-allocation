@@ -88,7 +88,7 @@ While results vary across time periods, the framework consistently demonstrates 
 ## Repository Structure
 
 ```text
-.
+
 ├── README.md
 ├── requirements.txt
 ├── LICENSE
