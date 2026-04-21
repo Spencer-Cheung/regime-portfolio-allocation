@@ -139,7 +139,7 @@ Run the notebooks in the following order:
 
 Arun Palaniappan (Co-Owner): Led the development and refinement of the written report and project video. Developed the initial supervised models and contributed to GitHub repository development and visualizations.
 
-Phuc Nguyen (Co-Owner): Contributed to data acquisition, data cleaning, and feature engineering. Played a key role in both unsupervised and supervised modeling, as well as the development of the allocation framework. Also contributed to data visualization and analysis.
+Phuc Nguyen (Co-Owner): Contributed to data acquisition, data cleaning, and feature engineering. Played a key role in both unsupervised and supervised modeling, pioneering the 2 layer model, as well as the development of the allocation framework. Also contributed to data visualization and analysis.
 
 Spencer Cheung (Co-Owner): Led overall project direction and coordination. Responsible for initial data acquisition, data cleaning, and feature engineering. Implemented the unsupervised learning framework and contributed to the portfolio allocation approach. Developed the initial draft of the report and contributed to GitHub repository management and visualizations.
 
